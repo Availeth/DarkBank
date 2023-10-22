@@ -1,0 +1,29 @@
+[
+[
+
+  { "label": "Apple Inc.", "value": 150.25 },
+  { "label": "Microsoft Corporation", "value": 299.72 },
+  { "label": "Amazon.com Inc.", "value": 345.15 },
+  { "label": "Alphabet Inc. (Google)", "value": 225.45 },
+  { "label": "Facebook Inc.", "value": 329.35 },
+  { "label": "Tesla, Inc.", "value": 800.0 },
+  { "label": "Netflix, Inc.", "value": 600.5 },
+  { "label": "Johnson & Johnson", "value": 170.75 },
+  { "label": "Walmart Inc.", "value": 140.2 },
+  { "label": "Visa Inc.", "value": 240.8 }
+],
+
+[
+     { "label": "Apple Inc.", "value": 250.25 },
+    { "label": "Microsoft Corporation", "value": 209},
+    { "label": "Amazon.com Inc.", "value": 120 },
+    { "label": "Alphabet Inc. (Google)", "value": 190},
+    { "label": "Facebook Inc.", "value": 302.35 },
+    { "label": "Tesla, Inc.", "value": 500.0 },
+    { "label": "Netflix, Inc.", "value": 900.5 },
+    { "label": "Johnson & Johnson", "value": 126.85 },
+    { "label": "Walmart Inc.", "value": 340.2 },
+    { "label": "Visa Inc.", "value": 140.8 }
+]
+  
+]

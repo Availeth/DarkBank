@@ -1,0 +1,10 @@
+option, select{
+    width: 320px;
+    height: 50px;
+    border-radius: 5px;
+    color: green;
+}
+
+input{
+    color: black;
+}
