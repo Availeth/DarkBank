@@ -1,12 +1,31 @@
 import { Chart as ChartJS } from "chart.js/auto";
 // import { Bar, Line, Doughnut} from "react-chartjs";
-
+import { useEffect, useState } from "react";
 import { Bar, Line } from "react-chartjs-2";
 import Sidebar from "./Sidebar";
 import sourceData from "../data/sourceData.json";
-
+import axios from "axios";
+import Coins from "./Coins";
 
 const Invest = () => {
+
+  const [coins, setCoins ] = useState([])
+    useEffect(() =>{
+          axios
+            .get(
+              "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+            )
+            .then((res) => {
+              setCoins(res.data);
+              console.log(res.data);
+            })
+            .catch((error) => console.log(error));
+}, [])
+
+
+
+    
+
   return (
     <>
       <div className="bg-[#050101] w-[100vw] pt-[100px] flex h-full text-white">
@@ -93,44 +112,7 @@ const Invest = () => {
               }}
             />
 
-            <div className="my-40">
-              <div className="overflow-x-auto">
-                <table className="table">
-                  {/* head */}
-                  <thead className="text-white">
-                    <tr>
-                      <th></th>
-                      <th>Name</th>
-                      <th>Job</th>
-                      <th>Favorite Color</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {/* row 1 */}
-                    <tr>
-                      <th>TSLA</th>
-                      <td>TESLA INC.</td>
-                      <td>245.65</td>
-                      <td>+3.54</td>
-                    </tr>
-                    {/* row 2 */}
-                    <tr className="hover">
-                      <th>AAPL</th>
-                      <td>APPLE</td>
-                      <td>$300</td>
-                      <td>+10</td>
-                    </tr>
-                    {/* row 3 */}
-                    <tr>
-                      <th>GOGL</th>
-                      <td>GOOGLE INC.</td>
-                      <td>$1000</td>
-                      <td>+200</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+              <Coins/>
           </div>
         </aside>
       </div>
